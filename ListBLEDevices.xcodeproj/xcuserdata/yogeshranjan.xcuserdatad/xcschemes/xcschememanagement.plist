@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ListBLEDevices.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0239041F1AF5ECC9002495ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>023904361AF5ECC9002495ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0241E7661AFCBFD400F18374</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0241E77A1AFCBFD400F18374</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0245E6DE1B026FF300AF82A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0245E6F21B026FF400AF82A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
