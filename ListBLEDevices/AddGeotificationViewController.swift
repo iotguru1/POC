@@ -57,16 +57,16 @@ class AddGeotificationViewController: UITableViewController {
     }
     
     @IBAction func addNewGeotification(sender: AnyObject) {
-        var latitude = (latitudeText.text as NSString).doubleValue
-        var longitude = (longitudeText.text as NSString).doubleValue
+        var latitude = (latitudeText.text! as NSString).doubleValue
+        var longitude = (longitudeText.text! as NSString).doubleValue
         var coordinate = CLLocationCoordinate2D(latitude:latitude, longitude:longitude)//mapView.centerCoordinate
-        var radius = (radiusTextField.text as NSString).doubleValue
+        var radius = (radiusTextField.text! as NSString).doubleValue
         var identifier = NSUUID().UUIDString
         var note = notesTextField.text
         var eventType = (entryType.selectedSegmentIndex == 0) ? EventType.OnEntry : EventType.OnExit
         dismissViewControllerAnimated(true, completion: nil)
         // Add geotification
-        let bleLocation = BLELocation(coordinate: coordinate, radius: radius, identifier: identifier, note: note, eventType: eventType)
+        let bleLocation = BLELocation(coordinate: coordinate, radius: radius, identifier: identifier, note: note!, eventType: eventType)
         
         delegate!.addGeotification(bleLocation)
         

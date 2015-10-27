@@ -30,7 +30,7 @@ class GeotificationViewController: UIViewController, AddGeotificationsViewContro
                 locationManager.stopMonitoringForRegion(circularRegion)
             }
         }
-        println("monitored regions>>>\(locationManager.monitoredRegions.count)")
+        print("monitored regions>>>\(locationManager.monitoredRegions.count)")
         //locationManager.startUpdatingLocation()
         
         //set current location as the default region
@@ -137,11 +137,11 @@ class GeotificationViewController: UIViewController, AddGeotificationsViewContro
         }
         
         let region = regionWithGeotification(bleLocation)
-        println(region.radius)
-        println(region.notifyOnEntry)
-        println(region.notifyOnExit)
+        print(region.radius)
+        print(region.notifyOnEntry)
+        print(region.notifyOnExit)
         locationManager.startMonitoringForRegion(region)
-        println("started monitoring ....")
+        print("started monitoring ....")
     }
     
     func stopMonitoringGeotification (bleLocation: BLELocation) {
@@ -152,7 +152,7 @@ class GeotificationViewController: UIViewController, AddGeotificationsViewContro
                 }
             }
         }
-        println("stopped monitoring....")
+        print("stopped monitoring....")
     }
     
     func showSimpleAlertWithTitle(title: String!, #message: String, #viewController: UIViewController) {
@@ -171,30 +171,30 @@ class GeotificationViewController: UIViewController, AddGeotificationsViewContro
     }
     
     func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
-        println("Location Mananger failed with error...")
+        print("Location Mananger failed with error...")
     }
     
     func locationManager(manager: CLLocationManager!, monitoringDidFailForRegion region: CLRegion!, withError error: NSError!) {
-        println("Monitoring failed for region with identifier..."+error.description)
+        print("Monitoring failed for region with identifier..."+error.description)
     }
     
     func locationManager(manager: CLLocationManager!, didStartMonitoringForRegion region: CLRegion!) {
-        println("Monitoring Strated ..........")
+        print("Monitoring Strated ..........")
     }
     
     func handleRegionEvent (region: CLRegion) {
-        println("Geo fencing triggered...")
+        print("Geo fencing triggered...")
     }
     
     func locationManager(manager: CLLocationManager!, didEnterRegion region: CLRegion!) {
-        println("enter BLE region...")
+        print("enter BLE region...")
         if region is CLCircularRegion {
             handleRegionEvent(region)
         }
     }
     
     func locationManager(manager: CLLocationManager!, didExitRegion region: CLRegion!) {
-        println("Exit BLE region...")
+        print("Exit BLE region...")
         if region is CLCircularRegion {
             handleRegionEvent(region)
         }
